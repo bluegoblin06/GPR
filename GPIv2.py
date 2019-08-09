@@ -16,7 +16,6 @@ def entry(u_names):
 
     full_name=str(final_details[0])
     full_name=full_name.replace('Full Name : ','').replace(' ','_')
-    #full_name=full_name+'('+usr_name+')'
 
     records(full_name, final_details)
     print('Report Generated for profile : ',end='')
