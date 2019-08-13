@@ -21,16 +21,12 @@ def entry(u_names):
     print(colored(f'{full_name}','magenta',attrs=['bold']),end='')
     print(colored(f'({usr_name})', 'cyan', attrs=['bold']))
 
-
 def records(uname,details): #function to save records
     #fname=uname+'txt'
     f=open(uname+'.txt','w',encoding='utf-8')
     for i in details:
         f.write(i)
         f.write('\n')
-
-
-
 
 def basic_details(soup,usr_name):
     main_tag=soup.find(class_='float-left col-9 col-md-12 pl-2 pl-md-0')#All the essential details are in this tag
