@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import requests
 from termcolor import colored
@@ -16,8 +15,8 @@ def entry(u_names):
 
     full_name=str(final_details[0])
     full_name=full_name.replace('Full Name : ','').replace(' ','_')
-
-    records(full_name, final_details)
+    file_name=full_name+'('+usr_name+')'
+    records(file_name, final_details)
     print('Report Generated for profile : ',end='')
     print(colored(f'{full_name}','magenta',attrs=['bold']),end='')
     print(colored(f'({usr_name})', 'cyan', attrs=['bold']))
@@ -176,7 +175,7 @@ def repo_details(usr_name):
 if __name__ == '__main__':
 
     #################### Execution starts from here to i.e. calling entry function by passing the list of the name in that function
-    users=['fabpot','andrew','bluegoblin06']
+    users=['fabpot','andrew','bluegoblin06','akarsh17']
     print(colored('Profile Report Generation Started!!!!','blue'))
     entry(users)
-    print(colored('Thank You For Using This Tool!!! Have A Nice Day!!!!','yellow',attrs=['bold']))
+print(colored('Thank You For Using This Tool!!! Have A Nice Day!!!!','yellow',attrs=['bold']))
